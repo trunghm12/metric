@@ -109,5 +109,11 @@ class Program
 
         double wer = ErrorRateCalculator.CalculateWER(referenceWords, hypothesisWords);
         Console.WriteLine($"WER: {wer:P}");
+        
+        double score_cer = 1 - cer;
+        double score_wer = 1 - wer;
+        
+        Console.WriteLine($"Score cal by WER: {score_wer:P}");
+        Console.WriteLine($"Score cal by CER: {score_cer:P}");
     }
 }
